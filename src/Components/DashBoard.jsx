@@ -89,33 +89,41 @@ const DashBoard = () => {
         
                    <Button style={{marginLeft:"10px"}} onClick={() => deleteClient(client.id)}>Delete</Button>  */}
                   <div style={{ display: 'flex', gap: '10px' }}>
-                  <TooltipProvider>
-  <Tooltip>
+                  
+                  
+    <TooltipProvider>
+    <Tooltip>
     <TooltipTrigger>
                  <img src="/src/images/analysis.png" style={{height:"20px",width:"20px",marginRight:"10px",marginTop:"10px"}} onClick={() => navigate(`/clientview/${client.id}`)}  alt="" />
-                 </TooltipTrigger><TooltipContent>
+    </TooltipTrigger>
+    <TooltipContent>
       <p>View</p>
     </TooltipContent>
   </Tooltip>
-</TooltipProvider>
-<TooltipProvider>
-  <Tooltip>
-    <TooltipTrigger>
-<img src="/src/images/write.png" style={{height:"20px",width:"20px",marginRight:"10px",marginTop:"10px"}} onClick={() => navigate(`/update/${client.id}`)}  alt="" />
-</TooltipTrigger><TooltipContent>
+ </TooltipProvider>
+
+   <TooltipProvider>
+   <Tooltip>
+   <TooltipTrigger>
+           <img src="/src/images/write.png" style={{height:"20px",width:"20px",marginRight:"10px",marginTop:"10px"}} onClick={() => navigate(`/update/${client.id}`)}  alt="" />
+</TooltipTrigger>
+ <TooltipContent>
       <p>Update</p>
     </TooltipContent>
   </Tooltip>
 </TooltipProvider> 
+
 <TooltipProvider>
   <Tooltip>
     <TooltipTrigger>
-<img src="/src/images/trash.png" style={{height:"20px",width:"20px",marginRight:"10px",marginTop:"10px"}} onClick={() => deleteClient(client.id)} alt="" />
-</TooltipTrigger><TooltipContent>
+        <img src="/src/images/trash.png" style={{height:"20px",width:"20px",marginRight:"10px",marginTop:"10px"}} onClick={() => deleteClient(client.id)} alt="" />
+    </TooltipTrigger>
+    <TooltipContent>
       <p>Delete</p>
     </TooltipContent>
   </Tooltip>
-</TooltipProvider>  </div>
+</TooltipProvider> 
+        </div>
                  </div>
                </div>
              </Card>
